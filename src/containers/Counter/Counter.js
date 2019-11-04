@@ -9,6 +9,7 @@ class Counter extends Component {
     }
 
     counterChangedHandler = ( action, value ) => {
+        // eslint-disable-next-line default-case
         switch ( action ) {
             case 'inc':
                 this.setState( ( prevState ) => { return { counter: prevState.counter + 1 } } )
