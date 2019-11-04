@@ -58,10 +58,11 @@ store.dispatch({ type: 'ADD_COUNTER', value: 10 });
 console.log(store.getState());
 //dispatching action
 //action is dispatched by accessing the store
+//subscription will get triggered whenever the state inside the dispatching action will get updated.
 //dispatch is a function and it takes an argument- argument is an action- that should be the JS object which needs to have a type property
 //this is importand building block in getting the information which type of action was dispatched and what should we do in the reducer
 // type is unique identifier of our choice
-// type covention is all uppercase string - exampl- INC_COUNTER - it means increment the counter- it should be descriptive
+// type covention is all uppercase string - exampl- 'INC_COUNTER' or 'ADD_COUNTER' - it means increment the counter- it should be descriptive
 //here- INC is to just increment but ADD should add specific number to the counter and that value needs to be passed along with the type
 //to the type, we can add any other properties if need - like VALUE,NAME,ID...
 //inside the type also we can create another object which group all the data like payload:{}
